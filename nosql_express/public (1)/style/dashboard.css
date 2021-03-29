@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 16px;
+    color: #132733;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+html, body {
+    width: 100%;
+    min-height: 100%;
+    padding-top: 0px;
+    margin-top: 0px;
+    background-color: rgb(250, 252, 253);
+    position: absolute;
+    z-index: 1;
+}
+
+/* cellphone(default) */
+/* header */
+.header{
+    background-color:#4E9ECC;
+    height: 104px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border-bottom: 1px solid rgb(243, 243, 243);
+}
+.logohome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logohome:hover{
+    text-decoration: none;
+}
+.logo{
+    width: 96px;
+    margin: 4px;
+}
+.logoname{
+    display: none;
+}
+
+/* nav */
+.nav{
+    position: relative;
+    padding: 4px;
+    background-color:#4E9ECC;
+    box-shadow:10px 8px 10px -10px rgb(94, 94, 94), -10px 8px 10px -10px rgb(94, 94, 94);
+}
+.nav-link{
+    margin:2px 4px;
+    padding: 8px;
+}
+a{
+    color: #fff;
+}
+.nav-link:hover{
+    color: #fff;
+    border-radius: 5px;
+    background-color: #3A7699;
+}
+.nav-link:active{
+    color: #fff;
+    border-radius: 5px;
+    background-color: #3A7699;
+}
+.nav-link.active{
+    border-radius: 5px;
+    background-color: #274F66;
+}
+
+.menu_icon{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    vertical-align:middle;
+}
+.menu_word{
+    vertical-align: middle;
+    display: none;
+    color: #fff;
+}
+.user_icon{
+    width:25px;
+}
+.logout_icon{
+    width:16px;
+}
+.logout_icon + span{
+    margin-left: 5px;
+}
+.nav-d{
+    position: absolute;
+    top: 4px;
+    right : 16px;
+    z-index: 10000000;
+}
+.dropdown-menu{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+}
+.dropdown-toggle{
+    color:white;
+}
+
+/* content */
+.col-12,.col-xl-6{
+    padding: 8px;
+}
+.wrapper{
+    padding: 32px;
+    margin: 8px;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 10px;
+    box-shadow:0px 0px 2px rgb(136, 186, 219);
+    min-height: 400px;
+}
+.wrapper h5{
+    font-size: 24px;
+}
+
+/* tablet */
+@media screen and (min-width: 768px) {
+    .menu_word{
+        vertical-align:block;
+        display:inline;
+    }
+    .logo{
+        width: 96px;
+        margin: 0px 24px;
+    }
+    .logoname{
+        display: inline;
+        color: #fff;
+        font-size: 48px;
+        font-weight: 300;
+    }
+}
+
+/* PC */
+@media screen and (min-width: 1200px) {
+    .user_icon{
+        width:25px;
+    }
+    .logout_icon{
+        width:16px;
+    }
+    .logout_icon + span{
+        margin-left: 5px;
+    }
+    .nav-d{
+        position: absolute;
+        top: 4px;
+        right : 16px;
+    }
+    .dropdown-toggle{
+        color:white;
+    }
+}

@@ -1,0 +1,41 @@
+<% include template/header.ejs %>
+	<title>Detection</title>
+	<!-- Content -->
+	<div class="container">
+
+		<div class="row">
+			<div class="col-12">
+			<div class="wrapper">
+				<label for="formGroupExampleInput">Upload images for detection with YOLOv4 (format: JPEG, JPG, PNG):</label>
+				<br>
+				<input class="uploadimg" name="blockimg" id="blockimg" multiple="multiple" type="file" accept="">
+			</div>
+		</div>
+			<div class="col-12 col-xl-6">
+				<form id="form_file">
+					<div class="form-group">
+						
+						
+
+					</div>
+					<!-- <div class="form-group">
+					<label for="formGroupExampleInput">YOLOv5-INFERENCE - JPEG, JPG, PNG :</label>
+					<input style="width: 200px;" name="btn_yolov5" id="btn_yolov5" multiple="multiple" type="file" accept=".jpg, .jpeg, .png|image/*">
+				</div> -->
+				</form>
+			</div>
+		</div>
+
+		<div class="row" id="div_img">
+
+		</div>
+
+	</div>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="style/detection.css">
+	<!-- JS -->
+	<script src="javascripts/detection.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+	<% include template/footer.ejs %>

@@ -1,0 +1,34 @@
+<% include template/header.ejs %>
+	<title>Dashboard</title>
+	<!-- Content -->
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h5></h5>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 col-xl-6">
+				<div class="wrapper">
+					<h5>Box Temperature</h5>
+					<canvas id="t_temperature" width="100%" height="100%"></canvas>
+				</div>
+			</div>
+			<div class="col-12 col-xl-6">
+				<div class="wrapper">
+					<h5>Water Temperature</h5>
+					<canvas id="t_temperature2" width="100%" height="100%"></canvas>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="style/dashboard.css">
+	<!-- JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+	integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+	crossorigin="anonymous"></script>
+	<script src="javascripts/dashboard.js"></script>
+
+	<% include template/footer.ejs %>

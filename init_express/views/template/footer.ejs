@@ -1,0 +1,51 @@
+<script>
+    $(function () {
+        $(".nav-item").mouseover(function () {
+            gsap.to($(this), { duration: 0.3, scale: 1.05 });
+        })
+        $(".nav-item").mouseout(function () {
+            gsap.to($(this), { duration: 0.3, scale: 1 });
+        })
+        gsap.fromTo(".logohome", { opacity: 0.1, x: -10 }, { opacity: 1, x: 0, duration: 1 });
+        gsap.from("body", { duration: 1, opacity: 0.3 });
+        gsap.from(".wrapper_c", { duration: 2, opacity: 0.3, ease: "expo.out" });
+        gsap.from(".wrapper", { duration: 2, opacity: 0.3, ease: "expo.out" });
+
+        if ($(window).width() < 720) {
+                $(".nav").removeClass("justify-content-center")
+            } else {
+                $(".nav").addClass("justify-content-center")
+            }
+        $(window).resize(function () {
+            if ($(window).width() < 720) {
+                $(".nav").removeClass("justify-content-center")
+            } else {
+                $(".nav").addClass("justify-content-center")
+            }
+        });
+
+
+        // 判斷路由 並套用 menu active - css
+        var href = window.location.pathname;
+        if (href == "/") {
+            var a = $(".nav-link").eq(0).addClass("active")
+        }
+        if (href == "/dashboard") {
+            var a = $(".nav-link").eq(1).addClass("active")
+        }
+        if (href == "/photos") {
+            var a = $(".nav-link").eq(2).addClass("active")
+        }
+        if (href == "/detection") {
+            var a = $(".nav-link").eq(3).addClass("active")
+        }
+        if (href == "/about") {
+            var a = $(".nav-link").eq(4).addClass("active")
+        }
+
+    });
+</script>
+
+</body>
+
+</html>

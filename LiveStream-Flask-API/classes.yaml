@@ -1,0 +1,22 @@
+# class names
+names: ['fish1',"fish2", "fish3","fish4","fish5"]
+
+# class_count
+nc : 5
+
+# Image Path
+image_train: "./images/train"
+image_test: "./images/test"
+image_val: "./images/val"
+
+class_es: 5
+
+
+
+
+
+
+
+
+
+

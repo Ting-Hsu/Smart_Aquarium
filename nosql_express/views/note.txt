@@ -1,0 +1,51 @@
+login
+signup
+
+Fish Everyday
+menu
+    Home home
+    Dashboard dashboard
+    Photos/Gallery photos
+    Settings settings
+    About about
+    Help help
+
+color
+#61C5FF
+#4E9ECC  logo
+#3A7699
+#274F66
+#132733
+
+&ordm; 溫度單位
+&copy; 版權符號
+
+$grid-breakpoints: (
+cellphone:400px (default)
+tablet:768px (media-breakpoint)
+PC:1200px (media-breakpoint)
+
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+);
+
+login:
+    <input type="email" class="form-control is-valid" id="account" aria-label="Account" required>
+    <div class="valid-feedback">
+							Looks good!
+						</div>
+
+    <input type="password" class="form-control is-invalid" id="validationServer02"  placeholder="Password" aria-label="Password" required>
+						<div class="invalid-feedback">
+							Please provide a valid city.
+						</div>
+https://jqueryui.com/datepicker/

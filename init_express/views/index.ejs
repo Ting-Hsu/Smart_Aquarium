@@ -1,0 +1,102 @@
+<% include template/header.ejs %>
+<title>Home</title>
+	<!-- Content -->
+	<div class="container">
+		<div class="row">
+			<div class="col-12 tankname">
+				<div class="wrapper_t" id="tankname">
+					<%= locals.tankname %>
+				</div>
+			</div>
+			<div class="col-12 col-md-6">
+				<div class="wrapper">
+					<img src="img/fake1.jpg" id="picture">
+					<span id="picture_time">loading...</span>
+					<hr>
+					<div class="wrapper_i">
+						<!-- <a href="index_live.html" title="Live"> -->
+						<button type="button" class="btn btn-info" id="liveb" data-toggle="modal"
+							data-target="#Modal">Live</button>
+						<!-- </a> -->
+					</div>
+
+					<!-- Modal -->
+					<div class="modal fade" id="Modal" tabindex="-1" role="dialog"
+						aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title">Live</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true" class="close">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<span id="live_time">Now</span>
+									<img src="http://172.20.10.6:5000/YOLOv4LiveStreaming" id="live">
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Back</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-6">
+				<div class="wrapper_c">
+					<h5>Condition</h5>
+					<img src="img/thermometer.png" class="smallicon" id="health"><span>Box: </span><span>loading...</span><br>
+					<img src="img/thermometer.png" class="smallicon" id="health"><span>Water: </span><span>loading...</span><br>
+					<!-- <span>Water Temperature: </span><img src="img/s_bad.png" class="smallicon" id="activity"><img
+						src="img/help2.png" class="exicon tips" data-toggle="tooltip" data-placement="right"
+						title="green:good  yellow:neutral  red:bad"><br> -->
+				</div>
+				<!-- <div class="wrapper_c">
+					<h5>Info?</h5>
+					<span>Turbidity: </span><img src="img/t_good.png" class="smallicon" id="turbidity"><img
+						src="img/help2.png" class="exicon tips" data-toggle="tooltip" data-placement="right"
+						title="green:good  yellow:neutral  red:bad"><br>
+				</div> -->
+			</div>
+		</div>
+	</div>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="style/index.css">
+	<!-- JS -->
+	<script src="javascripts/index.js"></script>
+	<script src="javascripts/socket_client_send.js"></script>
+	<script src="javascripts/ajax.js"></script>
+
+	<script src="https://cdn.socket.io/3.0.0/socket.io.js"></script>
+	<script>
+		var ws = new WebSocket("ws://localhost:3011");
+		ws.onmessage = function (evt) {
+			var received_msg = evt.data;
+			var msg = JSON.parse(received_msg);
+			switch (msg.type) {
+				case "livePiTime":
+					$("#livePiTime").text(msg.text);
+					break;
+				case "livePiTemp":
+					$("#livePiTemp").text(msg.text);
+					break;
+				case "liveTemp":
+					$("#liveTemp").text(msg.text);
+					break;
+				case "liveCam":
+					$("#picture").attr('src', msg.text);
+					break;
+				case "liveCamStream":
+					$("#liveStream").attr('src', msg.text);
+					break;
+				default:
+					console.log(msg.type);
+					break;
+			}
+		};
+		
+	</script>
+
+	<% include template/footer.ejs %>

@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 16px;
+    color: #132733;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+html, body {
+    width: 100%;
+    min-height: 100%;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+/* cellphone(default) */
+/* header */
+.header{
+    background-color:#4E9ECC;
+    height: 104px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border-bottom: 1px solid rgb(243, 243, 243);
+}
+.logohome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logohome:hover{
+    text-decoration: none;
+}
+.logo{
+    width: 96px;
+    margin: 4px;
+}
+.logoname{
+    display: none;
+}
+
+/* nav */
+.nav{
+    padding: 4px;
+    background-color:#4E9ECC;
+    box-shadow:0px 0px 4px gray;
+}
+.nav-link{
+    margin:2px 4px;
+    padding: 8px;
+}
+a{
+    color: #fff;
+}
+.nav-link:hover{
+    color: #fff;
+    border-radius: 5px;
+    background-color: #3A7699;
+}
+.nav-link:active{
+    color: #fff;
+    border-radius: 5px;
+    background-color: #3A7699;
+}
+.nav-link.active{
+    border-radius: 5px;
+    background-color: #274F66;
+}
+
+.menu_icon{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    vertical-align:middle;
+}
+.menu_word{
+    vertical-align: middle;
+    display: none;
+    color: #fff;
+}
+
+/* content */
+.col-12{
+    padding: 8px;
+}
+.col-8, .col-2, .col-sm-1{
+    margin: 16px 4px;
+}
+/* .wrapper_t{
+    padding: 16px;
+    margin: 8px;
+    font-size: 32px;
+    color: #132733;
+} */
+
+.wrapper{
+    padding: 8px;
+    margin: 8px;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 10px;
+    box-shadow:0px 0px 2px rgb(136, 186, 219);
+}
+.opt{
+    border-bottom: 1px solid rgb(243, 243, 243);
+    display: flex;
+    align-items: center; 
+    padding: 0px;
+    margin: 0px;
+}
+.form-control{
+    display: inline-block;
+    padding: 2px;
+    min-width: 70px;
+}
+
+
+/* tablet */
+@media screen and (min-width: 768px) {
+    .menu_word{
+        vertical-align:block;
+        display:inline;
+    }
+    .logo{
+        width: 96px;
+        margin: 0px 24px;
+    }
+    .logoname{
+        display: inline;
+        color: #fff;
+        font-size: 48px;
+        font-weight: 300;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 990px)  {
+    .form-control{
+        display: inline-block;
+        min-width: 80px;
+    }
+}
+/* PC */
+@media screen and (min-width: 1200px) {
+}
+
+/* .wrapper{
+    padding: 32px;
+    margin: 8px;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 10px;
+    box-shadow:0px 0px 2px rgb(136, 186, 219);
+} */

@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,input_ptp2.so -o input_ptp2.so CMakeFiles/input_ptp2.dir/input_ptp2.c.o -lgphoto2 -lgphoto2_port 

@@ -1,0 +1,46 @@
+--id List-- 
+login.html
+    login_ac
+    login_pwd
+
+signup.html
+    signup_name
+    signup_ac
+    signup_pwd
+    signup_pwdc
+
+index.html
+    tankname
+    live
+    picture
+    picture_time
+    button
+
+    health
+    activity
+    feeding
+    temperature
+    turbidity
+
+live.html
+    back
+
+dashboard.html
+    activity_d
+    temperature_d
+    turbidity_d
+    顯示餵食、亮燈點（？
+
+photos.html
+    日、週、月 1/7/28-31
+    照相日期
+
+settings.html
+    change name
+    change pwd(no)
+    How long take pictures 5/10/30/60 min
+    max pictures reserved per day 5/10/20
+    feeding times 1/2/3
+    How many once 6/12/18g
+
+about.html

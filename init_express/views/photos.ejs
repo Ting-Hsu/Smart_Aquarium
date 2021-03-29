@@ -1,0 +1,29 @@
+<% include template/header.ejs %>
+<title>Photos</title>
+<!-- Content -->
+<div class="container">
+	<div class="row">
+		<!-- <input type="file" id="file" name="file" value="上傳圖片">
+		<button id="img_send_server">上傳圖片</button> -->
+		<div class="col-12">
+			<div class="date">
+				<img src="img/pre.png" class="exicon" id="preday">
+				<input type="text" id="datepicker" value="">
+				<img src="img/next.png" class="exicon" id="nextday">
+			</div>
+		</div>
+	</div>
+
+	<div class="row" id="img_columns">
+
+	</div>
+</div>
+
+<!-- CSS -->
+<link rel="stylesheet" href="style/photos.css">
+<link rel="stylesheet" href="js/jquery-ui.css">
+<!-- JS -->
+<script src="javascripts/photos.js"></script>
+<script src="js/jquery-ui.js"></script>
+
+<% include template/footer.ejs %>
