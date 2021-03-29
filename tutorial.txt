@@ -1,0 +1,18 @@
+使用說明
+all_server 資料夾：
+	•mjpg-streamer: 放在樹莓派上，用來跑Stream
+		⁃autostart.sh 開機執行檔中有執行指令，可以手動輸入，也可以依照教學(https://yayar.medium.com/樹莓派-開機自動開啟terminal執行python程式-87b6a1690f0a)做成開機執行
+	•init_express: 放在電腦上，cd到資料夾後'node bin/www'啟動即可至browser輸入網址(localhost:3000)進入，使用MySQL，與nosql_express二選一
+	•nosql_express: 放在電腦上，cd到資料夾後'node bin/www'啟動即可至browser輸入網址(localhost:3000)進入，使用MongoDB，與init_express二選一
+	•LiveStream-Flask-API: 放在電腦上，cd到資料夾後'python yolov4v5-realtime.py'啟動
+	•NProject: 放在樹莓派上，用來跑照片和溫度，cd到資料夾後'node app.js'啟動，即可至電腦browser輸入網址(RPi's IP:5438)進入，點開始串流
+		⁃透過JS執行內部有pythonshell來控制pi
+		⁃在樹梅派上首次執行app.js記得改以下三個IP(請看圖片ip1和ip2) 
+
+＊執行node bin/www遇到含"dolphin"的錯誤可能是因為不同系統node_modules版本不同造成，解決方法：
+	開啟終端機cd到資料夾後輸入：
+	$ sudo rm -rf node_modules/
+	$ npm install
+	他會幫你重新載入，這樣就能執行了
+＊電腦與樹莓派需使用同一網路，使用時記得改 ip
+＊bug: NProject的部分不知道為什麼只能在開server的電腦上顯示(即便在同一個區網內)
